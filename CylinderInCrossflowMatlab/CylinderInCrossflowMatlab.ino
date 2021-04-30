@@ -57,6 +57,7 @@ int sampleFreq = 75; // Number of sensor readings taken per second
 bool streamAnemometerData = false;
 long streamTime = 0;
 
+// Set pin modes, initial pin values, and start serial port
 void setup() {
   pinMode(cylStepPin, OUTPUT);
   pinMode(cylDirPin, OUTPUT);
@@ -74,6 +75,8 @@ void setup() {
   while (!Serial) {;} 
 }
 
+// Main loop - only use is for sampling and sending anemometer
+// data for vortex shedding experiment 
 void loop() {  
   if(streamAnemometerData ) {
     long stime = micros(); 
@@ -81,6 +84,9 @@ void loop() {
     long currTime = stime-1000;
     long prevTime = stime;
     float anemometer = 0.0;
+    // Following loop prints anemometer data and microseconds
+    // between samples.  Matlab parses the data and returns
+    // the two relevant arrays.
     Serial.print("Times and Anemometer readings:// "); 
     while (streamTime * 1000000 > micros() - stime) {
       prevTime = currTime;
@@ -99,6 +105,9 @@ void loop() {
   }
 }
 
+// Function to print out pressure  and anemometer values.
+// Called when request for pressure values OR anemometer values is sent
+// from Matlab
 void PrintPressureValues( ) { 
   Serial.print("Pressures (in Pa) for sensors {0} {1} {2} and Anemometer reading:// "); 
   Serial.print(pressureValues[0]);
@@ -112,21 +121,23 @@ void PrintPressureValues( ) {
   
 }
 
+// Reads voltages for anemometer and pressure values from LPS22HB sensors
+// for pressure.  Averages over the specified number.
 void UpdateAndAveragePressures(int avgCount) {
   pressureValues[0] = 0.0;
   pressureValues[1] = 0.0;
   pressureValues[2] = 0.0;
   anemometerValue = 0.0;
   for (int i = 0; i < avgCount; i++) {
+    anemometerValue += ((float)analogRead(anemometerPin)) / ((float)avgCount);
     for(int j = 0; j < 3; j++) { 
-      anemometerValue += ((float)analogRead(anemometerPin)) / (3.0 * (float)avgCount);
       pressureValues[j] += tpSensors.GetPressure(j) / (float)avgCount;
     }
     delay(1000 / sampleFreq + 1);
   }
 }
 
-
+// Moves vertical axis to the specified position
 void MoveToPosition(float aPos) {
   digitalWrite(vertDirPin, currentPos > aPos);
   aPos = max(0.0, min(aPos, maxPos));
@@ -146,6 +157,7 @@ void MoveToPosition(float aPos) {
   currentPos = aNewPos; //aPos;
 }
 
+// Moves cylinder to the specified angle
 void MoveToAngle(float anAngle) {
   digitalWrite(cylDirPin, currentAngle > anAngle);
   anAngle = max(0.0, min(anAngle, maxAngle)); 
@@ -166,6 +178,7 @@ void MoveToAngle(float anAngle) {
 }
 
 
+// Receives and processes commands from Matlab
 void serialEvent() {
   // If serial data is available, go into this loop 
   while (Serial.available()) {
