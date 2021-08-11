@@ -27,5 +27,12 @@ The second is the 'Automated' approach.  This is exactly what it sounds like.  S
 Here's a hastily put together schematic for the experimental setup:
 ![image](https://user-images.githubusercontent.com/34224135/116077465-2355ea80-a65b-11eb-8df5-0ca5c8ba87d2.png)
 
+## Potential Flow Problems
+Problem 1: Use potential flow theory to derive an expression for pressure on the surface of a cylinder in a crossflow.  Create a plot of the pressure percent difference, relative to the pressure at the front stagnation point, as a function of the angle (a) from horizontal from 0 to 90 degrees. 
+
+Problem 2: You built a 20ft long, 10ft radius Quonset hut-based cabin on flat ground and it weights 1000lbs. Your antagonistic neighbor does not like the economical and light-weight design, so they drilled a hole in the side of the cabin prior to a windstorm.  If the wind is blowing perpendicular to the axis of your cabin and parallel to the ground, at what wind velocity will your house start to lift off the ground? You do not know the angle (a), from horizontal, that your neighbor drilled the hole so create a plot relating angle and expected take-off wind velocity. 
+
+
+
 ## Questions?
 email me: patterson (at) msoe.edu
