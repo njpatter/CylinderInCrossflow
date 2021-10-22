@@ -5,7 +5,7 @@ Cylinder in a Crossflow Experiment
 This repository contains the code and instructions required for running each of the experiment versions and CFD simulation described in the ASME IMECE 2021 conference paper (citation and link when they are ready).
 
 ## CFD Tutorial
-Being updated... check back later.
+CFD_Tutorial markdown file with step-by-step instructions can be found in the 'CFD Files' directory.
 
 ## LPS22HB Library
 Each version requires the LPS22HB library located in the LPS22HB folder. There is a more comprehensive version of this library available through multiple sources, however this version was created to work with the 3 LPS22HB setup used in the Cylinder in a Crossflow experiment.
