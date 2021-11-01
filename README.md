@@ -33,6 +33,11 @@ Problem 1: Use potential flow theory to derive an expression for pressure on the
 Problem 2: You built a 20ft long, 10ft radius Quonset hut-based cabin on flat ground and it weights 1000lbs. Your antagonistic neighbor does not like the economical and light-weight design, so they drilled a hole in the side of the cabin prior to a windstorm.  If the wind is blowing perpendicular to the axis of your cabin and parallel to the ground, at what wind velocity will your house start to lift off the ground? You do not know the angle (a), from horizontal, that your neighbor drilled the hole so create a plot relating angle and expected take-off wind velocity. 
 
 
+## But what if I don't have a wind tunnel?
+Good news! I put together a simulator version of the physical lab. It can be found in this repository:
+https://github.com/njpatter/FluidMechanicsExperiments
+Additionally, the same repo has web-based simulators of a few other fluids labs:
+https://njpatter.github.io/FluidMechanicsExperiments/ 
 
 ## Questions?
 email me: patterson (at) msoe.edu
