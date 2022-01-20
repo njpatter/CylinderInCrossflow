@@ -42,7 +42,7 @@ The purpose of this tutorial is to simulate a cylinder in a crossflow. This simu
 			* Select 'cylinder_wall'
 			* Set 'Average Over' to 32
 			* Click 'OK'
-		*Click 'New' - 'Force Report' - 'Lift'
+		* Click 'New' - 'Force Report' - 'Lift'
 			* Change 'Name' to 'lift-force
 			* Select 'Lift Force'
 			* Select 'cylinder_wall'
