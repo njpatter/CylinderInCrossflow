@@ -34,7 +34,7 @@ The purpose of this tutorial is to simulate a cylinder in a crossflow. This simu
 				* Click 'Close'
 	* Double click on 'Setup - Reference Values'
 		* Set 'Compute from' to 'inlet'
-		* Set 'Area' to 1 m^2
+		* Set 'Area' to 0.0335 m^2
 	* Double click on 'Solution - Report Definitions'
 		* Click 'New' - 'Force Report' - 'Drag'
 			* Change 'Name' to 'timeavg-drag'
