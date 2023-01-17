@@ -88,6 +88,8 @@ After the simulation has completed...
 * Expand 'Results - Animations'
 	* Double click on 'Playback'
 		* Click the play button to watch the formation and procession of the Karman Vortex Street 
+	* Change 'Write/Record Format' to 'Video'
+	* Click 'Write'
 * Expand 'Results - Plots'
 	* Double click on 'XY Plot'
 		* Set 'Name' to 'cylinderpressure'
