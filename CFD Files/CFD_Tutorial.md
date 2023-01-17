@@ -53,17 +53,17 @@ The purpose of this tutorial is to simulate a cylinder in a crossflow. This simu
 		* Double click on 'Residual'
 			* Set 'Absolute Criteria' to 0.0001 for 'continuity', 'x-velocity', and 'y-velocity'
 			* Click OK
-	* Double click on 'Solution Initialization'
+	* Double click on 'Solution - Initialization'
 		* Select 'Standard Initialization'
 		* Set 'Compute from' to 'inlet'
 		* Click 'Initialize'
 	* Expand 'Solution - Calculation Activities'
 		* Double click on 'Solution Animations'
-			* Click 'New Object'
+			* Click 'New Object' then 'Contours'
 				* Set 'Contour Name' to 'vorticity-contours'
 				* Uncheck 'Auto Range'
 				* Uncheck 'Clip to Range'
-				* Set 'Contours of' to 'Velocity...' 'Vorticity Magnitude'
+				* Set 'Contours of' to 'Velocity...' **'Vorticity Magnitude'**
 				* Set Min to 0
 				* Set Max to 1500
 				* Click 'Save/Display'
